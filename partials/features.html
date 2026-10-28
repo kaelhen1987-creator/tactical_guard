@@ -7,13 +7,12 @@
 
     <div class="fx" id="fx">
       <div class="fx-nav">
-        <div class="fx-roles" role="group" aria-label="Filtrar por plataforma">
+        <div class="fx-roles" role="group" aria-label="Elegir dónde se usa">
           <button type="button" class="fx-role is-on" data-role="app" aria-pressed="true"><i class="bi bi-phone" aria-hidden="true"></i> App móvil</button>
-          <button type="button" class="fx-role" data-role="web" aria-pressed="false"><i class="bi bi-display" aria-hidden="true"></i> Panel web</button>
+          <button type="button" class="fx-role" data-role="panel" aria-pressed="false"><i class="bi bi-display" aria-hidden="true"></i> Panel web</button>
         </div>
 
         <div class="fx-list" role="tablist" aria-orientation="vertical" aria-label="Funciones">
-          <!-- App móvil -->
           <button class="fx-item" role="tab" id="fxt-acceso" aria-controls="fx-acceso" data-role="app" data-panel="acceso" type="button">
             <i class="bi bi-person-vcard" aria-hidden="true"></i>
             <span><strong>Control de acceso</strong><small>RUT en cualquier formato o escáner de cédula.</small></span>
@@ -31,26 +30,25 @@
             <span><strong>Botón SOS</strong><small>Siempre visible. La alerta llega a operaciones.</small></span>
           </button>
 
-          <!-- Panel web -->
-          <button class="fx-item" role="tab" id="fxt-bitacora" aria-controls="fx-bitacora" data-role="web" data-panel="bitacora" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-bitacora" aria-controls="fx-bitacora" data-role="panel" data-panel="bitacora" type="button" hidden>
             <i class="bi bi-clipboard-check" aria-hidden="true"></i>
             <span><strong>Bitácora de rondas</strong><small>Foto, hora, coordenadas y validez de cada marca.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-muro" aria-controls="fx-muro" data-role="web" data-panel="muro" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-muro" aria-controls="fx-muro" data-role="panel" data-panel="muro" type="button" hidden>
             <i class="bi bi-grid-3x2-gap" aria-hidden="true"></i>
             <span><strong>Muro de incidentes</strong><small>Los hechos de todas tus instalaciones en un lugar.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-pdf" aria-controls="fx-pdf" data-role="web" data-panel="pdf" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-pdf" aria-controls="fx-pdf" data-role="panel" data-panel="pdf" type="button" hidden>
             <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
             <span><strong>Informes ejecutivos en PDF</strong><small>Listos para entregar a tu cliente.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-padron" aria-controls="fx-padron" data-role="web" data-panel="padron" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-padron" aria-controls="fx-padron" data-role="panel" data-panel="padron" type="button" hidden>
             <i class="bi bi-people" aria-hidden="true"></i>
-            <span><strong>Padrón por Excel o CSV</strong><small>Carga tu nómina de trabajadores de una vez.</small></span>
+            <span><strong>Padrón por CSV</strong><small>Carga la lista blanca de cada faena y bloquea o habilita personas.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-instal" aria-controls="fx-instal" data-role="web" data-panel="instal" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-instal" aria-controls="fx-instal" data-role="panel" data-panel="instal" type="button" hidden>
             <i class="bi bi-buildings" aria-hidden="true"></i>
-            <span><strong>Instalaciones y accesos</strong><small>Da de alta o bloquea faenas y puntos de acceso.</small></span>
+            <span><strong>Instalaciones y accesos</strong><small>Crea y edita cada instalación con su ubicación; bloquéala cuando haga falta.</small></span>
           </button>
         </div>
       </div>
@@ -58,114 +56,91 @@
       <div class="fx-stage">
         <span class="fx-badge" id="fxBadge"><i class="bi bi-phone" aria-hidden="true"></i> App móvil del guardia</span>
 
-        <!-- 1 · Acceso -->
-        <div class="fx-panel" role="tabpanel" id="fx-acceso" aria-labelledby="fxt-acceso" tabindex="0" hidden>
-          <div class="fx-card fx-card--narrow">
-            <p class="fx-title">Control de acceso peatonal</p>
-            <div class="fx-input"><i class="bi bi-person-vcard" aria-hidden="true"></i><span class="fx-typed">12.345.678-5</span></div>
-            <div class="fx-pills"><span>12345678-5</span><span>12.345.678-5</span><span>12345678k</span><span>Cédula (QR)</span></div>
-            <div class="fx-result fx-late"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><b>RUT válido</b><small>Formato guardado: 12345678-5</small></div></div>
-          </div>
+        <!-- 1 · Acceso (Móvil) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-acceso" aria-labelledby="fxt-acceso" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--phone">
+            <img src="assets/img/app-control-acceso.webp" width="646" height="1438" alt="Pantalla de control de acceso peatonal de la app: campo de RUT, botón Validar acceso y botón SOS" loading="lazy">
+          </figure>
         </div>
 
-        <!-- 2 · Ronda -->
-        <div class="fx-panel" role="tabpanel" id="fx-ronda" aria-labelledby="fxt-ronda" tabindex="0" hidden>
-          <div class="fx-map" aria-hidden="true">
-            <div class="fx-zone"></div><div class="fx-pin"><i class="bi bi-geo-alt-fill"></i></div>
-            <div class="fx-guard"></div>
-            <span class="fx-dist fx-dist--out"><i class="bi bi-x-circle-fill"></i> Fuera del radio · 38 m</span>
-            <span class="fx-dist fx-dist--in"><i class="bi bi-check-circle-fill"></i> Geocerca válida · 3 m</span>
-          </div>
-          <p class="fx-note">El GPS del guardia se compara con el punto de vigilancia en cada marca.</p>
-        </div>
-
-        <!-- 3 · Novedad (Imagen 2 de referencia) -->
-        <div class="fx-panel" role="tabpanel" id="fx-novedad" aria-labelledby="fxt-novedad" tabindex="0" hidden>
-          <div class="fx-phone-card">
-            <div class="fx-phone-screen">
-              <div class="fx-phone-head">
-                <i class="bi bi-arrow-left" aria-hidden="true"></i>
-                <b>Reportar Novedad</b>
-              </div>
-              <div class="fx-phone-body">
-                <div class="fx-form-group">
-                  <label>Tipo de Novedad *</label>
-                  <div class="fx-select-box">
-                    <span><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Sospecha</span>
-                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <div class="fx-textarea-box">
-                  <span>Descripción del incidente</span>
-                  <i class="bi bi-mic" aria-hidden="true"></i>
-                </div>
-                <button type="button" class="fx-btn-evidence">
-                  <i class="bi bi-camera-fill" aria-hidden="true"></i> TOMAR EVIDENCIA (Opcional)
-                </button>
-                <button type="button" class="fx-btn-save">
-                  GUARDAR NOVEDAD
-                </button>
-              </div>
+        <!-- 2 · Ronda (Móvil - Placeholder si no existe) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-ronda" aria-labelledby="fxt-ronda" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--phone">
+            <img src="assets/img/app-ronda.webp" width="646" height="1438" alt="Pantalla de ronda de la app: punto de vigilancia, GPS validado y botón Tomar evidencia" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+            <div class="tg-placeholder tg-placeholder--phone" style="display:none;">
+              <i class="bi bi-geo-alt"></i>
+              <strong>assets/img/app-ronda.webp</strong>
+              <div class="tg-placeholder-meta"><i class="bi bi-phone"></i> Formato móvil (646 × 1438 px)</div>
+              <small>Pantalla de ronda: punto de vigilancia, GPS validado y botón Tomar evidencia.</small>
             </div>
-          </div>
+          </figure>
         </div>
 
-        <!-- 4 · SOS -->
-        <div class="fx-panel fx-panel--center" role="tabpanel" id="fx-sos" aria-labelledby="fxt-sos" tabindex="0" hidden>
-          <div class="fx-sos" aria-hidden="true"><i></i><i></i><i></i><b>SOS</b></div>
-          <p class="fx-note">Visible en todas las pantallas del guardia.</p>
+        <!-- 3 · Novedad (Móvil - Placeholder si no existe) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-novedad" aria-labelledby="fxt-novedad" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--phone">
+            <img src="assets/img/app-novedad.webp" width="646" height="1438" alt="Pantalla Reportar novedad de la app: tipo, descripción y botón Tomar evidencia" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+            <div class="tg-placeholder tg-placeholder--phone" style="display:none;">
+              <i class="bi bi-exclamation-triangle"></i>
+              <strong>assets/img/app-novedad.webp</strong>
+              <div class="tg-placeholder-meta"><i class="bi bi-phone"></i> Formato móvil (646 × 1438 px)</div>
+              <small>Pantalla Reportar novedad: tipo, descripción y botón Tomar evidencia.</small>
+            </div>
+          </figure>
+        </div>
+
+        <!-- 4 · SOS (Móvil) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-sos" aria-labelledby="fxt-sos" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--phone">
+            <img src="assets/img/app-control-acceso.webp" width="646" height="1438" alt="Botón SOS siempre visible en la esquina de la pantalla de la app" loading="lazy">
+          </figure>
         </div>
 
         <!-- 5 · Bitácora (Panel Web) -->
-        <div class="fx-panel" role="tabpanel" id="fx-bitacora" aria-labelledby="fxt-bitacora" tabindex="0" hidden>
-          <div class="fx-browser-view">
-            <img src="assets/img/panel-rondas.webp" width="1280" height="820" loading="lazy" alt="Panel web de operaciones - Bitácora de rondas">
-          </div>
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-bitacora" aria-labelledby="fxt-bitacora" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--desk">
+            <img src="assets/img/panel-rondas.webp" width="1600" height="896" alt="Panel web con la bitácora de rondas: foto, hora, coordenadas y geocerca de cada marca" loading="lazy">
+          </figure>
         </div>
 
-        <!-- 6 · Muro (Imagen 1 de referencia) -->
-        <div class="fx-panel" role="tabpanel" id="fx-muro" aria-labelledby="fxt-muro" tabindex="0" hidden>
-          <div class="fx-browser-view">
-            <img src="assets/img/panel-incidentes.webp" width="1280" height="820" loading="lazy" alt="Panel web de operaciones - Muro de incidentes">
-          </div>
+        <!-- 6 · Muro (Panel Web) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-muro" aria-labelledby="fxt-muro" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--desk">
+            <img src="assets/img/panel-incidentes.webp" width="1600" height="896" alt="Panel web con el muro de incidentes de todas las instalaciones" loading="lazy">
+          </figure>
         </div>
 
-        <!-- 7 · PDF -->
-        <div class="fx-panel fx-panel--center" role="tabpanel" id="fx-pdf" aria-labelledby="fxt-pdf" tabindex="0" hidden>
-          <div class="fx-sheet" aria-hidden="true">
-            <div class="fx-sheet__head"><i class="bi bi-shield-check"></i><b>Informe de rondas e incidentes</b></div>
-            <span class="fx-line w90"></span><span class="fx-line w70"></span><span class="fx-line w80"></span>
-            <div class="fx-sheet__box"><span class="fx-line w60"></span><span class="fx-line w40"></span></div>
-            <span class="fx-line w85"></span><span class="fx-line w50"></span>
-          </div>
-          <div class="fx-btn fx-btn--inline"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Exportar informe PDF</div>
+        <!-- 7 · PDF (Panel Web) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-pdf" aria-labelledby="fxt-pdf" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--desk">
+            <img src="assets/img/panel-incidentes.webp" width="1600" height="896" alt="Panel web con el botón Exportar informe PDF" loading="lazy">
+          </figure>
         </div>
 
-        <!-- 8 · Padrón -->
-        <div class="fx-panel" role="tabpanel" id="fx-padron" aria-labelledby="fxt-padron" tabindex="0" hidden>
-          <div class="fx-card">
-            <div class="fx-file"><i class="bi bi-filetype-csv" aria-hidden="true"></i><b>padron.csv</b><span class="fx-bar"><i></i></span><span class="tg-chip tg-chip--ok fx-late"><i class="bi bi-check2"></i> Importado</span></div>
-            <table class="fx-table" aria-label="Ejemplo de padrón">
-              <thead><tr><th>RUT</th><th>Nombre</th><th>Instalación</th></tr></thead>
-              <tbody>
-                <tr><td>12.345.678-5</td><td>Trabajador de ejemplo 1</td><td>Garita Norte</td></tr>
-                <tr><td>11.222.333-4</td><td>Trabajador de ejemplo 2</td><td>Garita Norte</td></tr>
-                <tr><td>9.876.543-2</td><td>Trabajador de ejemplo 3</td><td>Acceso Vehicular</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <!-- 8 · Padrón (Panel Web - Placeholder si no existe) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-padron" aria-labelledby="fxt-padron" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--desk">
+            <img src="assets/img/panel-padron.webp" width="1600" height="896" alt="Panel web con la gestión del padrón de acceso" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+            <div class="tg-placeholder" style="display:none;">
+              <i class="bi bi-people"></i>
+              <strong>assets/img/panel-padron.webp</strong>
+              <div class="tg-placeholder-meta"><i class="bi bi-display"></i> Resolución recomendada: 1600 × 896 px</div>
+              <small>Panel web con la gestión del padrón de acceso: carga CSV y estados activo o bloqueado.</small>
+            </div>
+          </figure>
         </div>
 
-        <!-- 9 · Instalaciones -->
-        <div class="fx-panel" role="tabpanel" id="fx-instal" aria-labelledby="fxt-instal" tabindex="0" hidden>
-          <div class="fx-card">
-            <p class="fx-title">Instalaciones y accesos</p>
-            <ul class="fx-sites">
-              <li><i class="bi bi-buildings"></i><div><b>Faena Norte</b><small>3 puntos de control · 6 guardias</small></div><span class="tg-chip">Ejemplo</span></li>
-              <li><i class="bi bi-buildings"></i><div><b>Planta Central</b><small>2 puntos de control · 4 guardias</small></div><span class="tg-chip">Ejemplo</span></li>
-              <li><i class="bi bi-buildings"></i><div><b>Bodega Sur</b><small>1 punto de control · 2 guardias</small></div><span class="tg-chip">Ejemplo</span></li>
-            </ul>
-          </div>
+        <!-- 9 · Instalaciones (Panel Web - Placeholder si no existe) -->
+        <div class="fx-panel fx-panel--shot" role="tabpanel" id="fx-instal" aria-labelledby="fxt-instal" tabindex="0" hidden>
+          <figure class="fx-shot fx-shot--desk">
+            <img src="assets/img/panel-instalaciones.webp" width="1600" height="896" alt="Panel web con la gestión de instalaciones" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+            <div class="tg-placeholder" style="display:none;">
+              <i class="bi bi-buildings"></i>
+              <strong>assets/img/panel-instalaciones.webp</strong>
+              <div class="tg-placeholder-meta"><i class="bi bi-display"></i> Resolución recomendada: 1600 × 896 px</div>
+              <small>Panel web con la gestión de instalaciones: ID, nombre, ubicación, estado y acciones.</small>
+            </div>
+          </figure>
         </div>
       </div>
     </div>

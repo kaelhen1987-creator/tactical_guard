@@ -8,17 +8,35 @@
     <div class="row g-4 g-lg-5 align-items-start">
       <div class="col-lg-4">
         <div class="showcase-tabs" role="tablist" aria-label="Pantallas de la app">
+          <p class="showcase-group" role="presentation">Panel web</p>
           <button class="showcase-tab active" id="tab-rondas" data-bs-toggle="pill" data-bs-target="#pane-rondas" type="button" role="tab" aria-controls="pane-rondas" aria-selected="true">
-            <strong>Bitácora de rondas</strong><span>Panel web: foto, hora, coordenadas y validez de cada marca.</span>
+            <strong>Bitácora de rondas</strong><span>Foto, hora, coordenadas y validez de cada marca.</span>
           </button>
           <button class="showcase-tab" id="tab-incidentes" data-bs-toggle="pill" data-bs-target="#pane-incidentes" type="button" role="tab" aria-controls="pane-incidentes" aria-selected="false">
-            <strong>Muro de incidentes</strong><span>Panel web: los hechos de todas las instalaciones, con foto.</span>
+            <strong>Muro de incidentes</strong><span>Los hechos de todas las instalaciones, con foto.</span>
           </button>
+          <button class="showcase-tab" id="tab-guardias" data-bs-toggle="pill" data-bs-target="#pane-guardias" type="button" role="tab" aria-controls="pane-guardias" aria-selected="false">
+            <strong>Guardias</strong><span>Nómina de operadores por instalación, con su estado.</span>
+          </button>
+          <button class="showcase-tab" id="tab-instalaciones" data-bs-toggle="pill" data-bs-target="#pane-instalaciones" type="button" role="tab" aria-controls="pane-instalaciones" aria-selected="false">
+            <strong>Instalaciones</strong><span>Faenas y puntos de control, con ubicación y estado.</span>
+          </button>
+          <button class="showcase-tab" id="tab-padron" data-bs-toggle="pill" data-bs-target="#pane-padron" type="button" role="tab" aria-controls="pane-padron" aria-selected="false">
+            <strong>Padrón de acceso</strong><span>Lista de trabajadores autorizados por faena, con carga por CSV y estado activo o bloqueado.</span>
+          </button>
+
+          <p class="showcase-group" role="presentation">App del guardia</p>
           <button class="showcase-tab" id="tab-acceso" data-bs-toggle="pill" data-bs-target="#pane-acceso" type="button" role="tab" aria-controls="pane-acceso" aria-selected="false">
-            <strong>Control de acceso</strong><span>App del guardia: RUT en cualquier formato o escáner de cédula.</span>
+            <strong>Control de acceso</strong><span>RUT en cualquier formato o escáner de cédula.</span>
+          </button>
+          <button class="showcase-tab" id="tab-ronda" data-bs-toggle="pill" data-bs-target="#pane-ronda" type="button" role="tab" aria-controls="pane-ronda" aria-selected="false">
+            <strong>Ronda</strong><span>Punto por punto, con GPS validado y evidencia en cámara.</span>
+          </button>
+          <button class="showcase-tab" id="tab-novedad" data-bs-toggle="pill" data-bs-target="#pane-novedad" type="button" role="tab" aria-controls="pane-novedad" aria-selected="false">
+            <strong>Novedad</strong><span>Tipo de hecho, descripción y foto opcional.</span>
           </button>
           <button class="showcase-tab" id="tab-turno" data-bs-toggle="pill" data-bs-target="#pane-turno" type="button" role="tab" aria-controls="pane-turno" aria-selected="false">
-            <strong>Inicio de turno</strong><span>App del guardia: ingresa, elige su punto de control y confirma su RUT.</span>
+            <strong>Inicio de turno</strong><span>Ingreso, punto de control y RUT del guardia.</span>
           </button>
         </div>
       </div>
@@ -26,27 +44,106 @@
       <div class="col-lg-8">
         <div class="showcase-stage">
           <div class="tab-content w-100">
+            <!-- 1 · Bitácora de rondas -->
             <div class="tab-pane fade show active" id="pane-rondas" role="tabpanel" aria-labelledby="tab-rondas" tabindex="0">
               <div class="tg-browser">
                 <div class="tg-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>
-                <img src="assets/img/panel-rondas.webp" width="1280" height="820" loading="lazy" alt="Panel de auditoría y bitácora de rondas con indicadores de cumplimiento de geocerca y registros con foto">
+                <img src="assets/img/panel-rondas.webp" width="1600" height="896" loading="lazy" alt="Panel de auditoría de rondas con indicadores de geocerca y registros con foto">
               </div>
             </div>
+
+            <!-- 2 · Muro de incidentes -->
             <div class="tab-pane fade" id="pane-incidentes" role="tabpanel" aria-labelledby="tab-incidentes" tabindex="0">
               <div class="tg-browser">
                 <div class="tg-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>
-                <img src="assets/img/panel-incidentes.webp" width="1280" height="820" loading="lazy" alt="Muro de incidentes con tarjetas de emergencia médica e intrusión, cada una con foto, instalación, RUT y hora">
+                <img src="assets/img/panel-incidentes.webp" width="1600" height="896" loading="lazy" alt="Muro de incidentes con tarjetas de intrusión y emergencia médica">
               </div>
             </div>
+
+            <!-- 3 · Guardias (Pendiente de captura) -->
+            <div class="tab-pane fade" id="pane-guardias" role="tabpanel" aria-labelledby="tab-guardias" tabindex="0">
+              <div class="tg-browser">
+                <div class="tg-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+                <img src="assets/img/panel-guardias.webp" width="1600" height="896" loading="lazy" alt="Nómina de operadores con RUT, nombre, estado y acciones" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+                <div class="tg-placeholder" style="display:none;">
+                  <i class="bi bi-person-badge"></i>
+                  <strong>assets/img/panel-guardias.webp</strong>
+                  <div class="tg-placeholder-meta"><i class="bi bi-display"></i> Resolución recomendada: 1600 × 896 px</div>
+                  <small>Pantalla de nómina de guardias con RUT, nombre, instalación asignada, estado y acciones.</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 · Instalaciones (Pendiente de captura) -->
+            <div class="tab-pane fade" id="pane-instalaciones" role="tabpanel" aria-labelledby="tab-instalaciones" tabindex="0">
+              <div class="tg-browser">
+                <div class="tg-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+                <img src="assets/img/panel-instalaciones.webp" width="1600" height="896" loading="lazy" alt="Gestión de instalaciones con identificador, nombre, ubicación y estado" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+                <div class="tg-placeholder" style="display:none;">
+                  <i class="bi bi-buildings"></i>
+                  <strong>assets/img/panel-instalaciones.webp</strong>
+                  <div class="tg-placeholder-meta"><i class="bi bi-display"></i> Resolución recomendada: 1600 × 896 px</div>
+                  <small>Gestión de faenas y puntos de control con ubicación, estado activo/bloqueado y acciones.</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 · Padrón de acceso (Pendiente de captura) -->
+            <div class="tab-pane fade" id="pane-padron" role="tabpanel" aria-labelledby="tab-padron" tabindex="0">
+              <div class="tg-browser">
+                <div class="tg-browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+                <img src="assets/img/panel-padron.webp" width="1600" height="896" loading="lazy" alt="Gestión del padrón de acceso con carga de CSV y estados activo y bloqueado" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+                <div class="tg-placeholder" style="display:none;">
+                  <i class="bi bi-people"></i>
+                  <strong>assets/img/panel-padron.webp</strong>
+                  <div class="tg-placeholder-meta"><i class="bi bi-display"></i> Resolución recomendada: 1600 × 896 px</div>
+                  <small>Lista de trabajadores autorizados por faena con botón de Cargar CSV y selector de estado.</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 · Control de acceso (Móvil) -->
             <div class="tab-pane fade" id="pane-acceso" role="tabpanel" aria-labelledby="tab-acceso" tabindex="0">
               <div class="showcase-phones">
-                <div class="tg-device"><img src="assets/img/app-control-acceso.webp" width="390" height="844" loading="lazy" alt="Pantalla de control de acceso peatonal en el celular, con campo de RUT y botón Validar acceso"></div>
+                <div class="tg-device"><img src="assets/img/app-control-acceso.webp" width="646" height="1438" loading="lazy" alt="Control de acceso peatonal en el celular, con campo de RUT y botón Validar acceso"></div>
               </div>
             </div>
+
+            <!-- 7 · Ronda (Pendiente de captura) -->
+            <div class="tab-pane fade" id="pane-ronda" role="tabpanel" aria-labelledby="tab-ronda" tabindex="0">
+              <div class="showcase-phones">
+                <div class="tg-device">
+                  <img src="assets/img/app-ronda.webp" width="646" height="1438" loading="lazy" alt="Pantalla de ronda con punto de vigilancia, GPS validado y botón Tomar evidencia" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+                  <div class="tg-placeholder tg-placeholder--phone" style="display:none;">
+                    <i class="bi bi-geo-alt"></i>
+                    <strong>assets/img/app-ronda.webp</strong>
+                    <div class="tg-placeholder-meta"><i class="bi bi-phone"></i> Formato móvil (646 × 1438 px)</div>
+                    <small>Pantalla de ronda de la app: punto de vigilancia, GPS validado y botón Tomar evidencia.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8 · Novedad (Pendiente de captura) -->
+            <div class="tab-pane fade" id="pane-novedad" role="tabpanel" aria-labelledby="tab-novedad" tabindex="0">
+              <div class="showcase-phones">
+                <div class="tg-device">
+                  <img src="assets/img/app-novedad.webp" width="646" height="1438" loading="lazy" alt="Pantalla para reportar una novedad con tipo, descripción y foto opcional" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block; width:100%; height:auto;">
+                  <div class="tg-placeholder tg-placeholder--phone" style="display:none;">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>assets/img/app-novedad.webp</strong>
+                    <div class="tg-placeholder-meta"><i class="bi bi-phone"></i> Formato móvil (646 × 1438 px)</div>
+                    <small>Pantalla para reportar una novedad con tipo, descripción y foto opcional.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9 · Inicio de turno (Móvil) -->
             <div class="tab-pane fade" id="pane-turno" role="tabpanel" aria-labelledby="tab-turno" tabindex="0">
               <div class="showcase-phones">
-                <div class="tg-device"><img src="assets/img/app-login.webp" width="390" height="844" loading="lazy" alt="Pantalla de ingreso para personal de seguridad con correo y contraseña"></div>
-                <div class="tg-device"><img src="assets/img/app-inicio-turno.webp" width="390" height="844" loading="lazy" alt="Pantalla de inicio de turno con punto de control y RUT del guardia"></div>
+                <div class="tg-device"><img src="assets/img/app-login.webp" width="646" height="1438" loading="lazy" alt="Ingreso para personal de seguridad con correo y contraseña"></div>
+                <div class="tg-device"><img src="assets/img/app-inicio-turno.webp" width="646" height="1438" loading="lazy" alt="Inicio de turno con punto de control y RUT del guardia"></div>
               </div>
             </div>
           </div>

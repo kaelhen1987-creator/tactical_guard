@@ -10,8 +10,9 @@ TG.features = function () {
   const panels = root.querySelectorAll(".fx-panel");
   const badge = document.getElementById("fxBadge");
   const BADGE = {
-    app: '<i class="bi bi-phone" aria-hidden="true"></i> App móvil del guardia',
-    web: '<i class="bi bi-display" aria-hidden="true"></i> Panel web de operaciones'
+    app:   '<i class="bi bi-phone" aria-hidden="true"></i> App móvil del guardia',
+    panel: '<i class="bi bi-display" aria-hidden="true"></i> Panel web de operaciones',
+    web:   '<i class="bi bi-display" aria-hidden="true"></i> Panel web de operaciones'
   };
 
   function select(item) {
@@ -32,7 +33,7 @@ TG.features = function () {
     items.forEach((i) => { i.hidden = i.dataset.role !== role; });
     const target = targetPanel
       ? items.find((i) => i.dataset.role === role && i.dataset.panel === targetPanel)
-      : (role === "web" ? items.find((i) => i.dataset.role === "web" && i.dataset.panel === "muro") : items.find((i) => i.dataset.role === role));
+      : items.find((i) => i.dataset.role === role);
     if (target) select(target);
   }
 
@@ -51,5 +52,5 @@ TG.features = function () {
     t.focus(); select(t);
   });
 
-  setRole("app", "novedad");
+  setRole("app");
 };
