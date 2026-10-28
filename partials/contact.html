@@ -1,0 +1,79 @@
+<section class="section contact" id="contacto" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="row gy-5 gx-lg-5 align-items-center">
+      <div class="col-lg-5">
+        <h2 id="contact-title">Veamos Tactical Guard con tu operación.</h2>
+        <p class="lead mt-3">Cuéntanos cuántos guardias y cuántas instalaciones tienes. Te mostramos la app con un caso parecido al tuyo.</p>
+        <ul class="contact-list">
+          <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Demostración de la app del guardia y del panel</span></li>
+          <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Revisamos cómo cargar tu padrón y tus puntos de control</span></li>
+          <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Resolvemos tus dudas sobre la operación sin señal</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <form class="tg-form" id="contactForm" novalidate>
+            <h3>Solicitar demostración</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="cName" name="nombre" placeholder="Nombre" autocomplete="name" required>
+                  <label for="cName">Nombre</label>
+                  <div class="invalid-feedback">Escribe tu nombre.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="cCompany" name="empresa" placeholder="Empresa" autocomplete="organization" required>
+                  <label for="cCompany">Empresa</label>
+                  <div class="invalid-feedback">Escribe el nombre de tu empresa.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="cEmail" name="correo" placeholder="Correo" autocomplete="email" required>
+                  <label for="cEmail">Correo electrónico</label>
+                  <div class="invalid-feedback">Escribe un correo válido, por ejemplo nombre@empresa.cl.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control" id="cPhone" name="telefono" placeholder="Teléfono" autocomplete="tel">
+                  <label for="cPhone">Teléfono (opcional)</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <select class="form-select" id="cSize" name="guardias" required>
+                    <option value="" selected disabled></option>
+                    <option>Hasta 10 guardias</option>
+                    <option>11 a 50 guardias</option>
+                    <option>51 a 200 guardias</option>
+                    <option>Más de 200 guardias</option>
+                  </select>
+                  <label for="cSize">¿Cuántos guardias tienes?</label>
+                  <div class="invalid-feedback">Elige una opción.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control" id="cMsg" name="mensaje" placeholder="Mensaje" style="height:7.5rem"></textarea>
+                  <label for="cMsg">¿Qué te gustaría resolver? (opcional)</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-tg w-100" id="contactSubmit"><i class="bi bi-send" aria-hidden="true"></i> Solicitar demostración</button>
+                <p class="small mt-2 mb-0" id="contactError" role="alert" hidden style="color:var(--tg-sos)"></p>
+              </div>
+            </div>
+          </form>
+          <div class="contact-ok" id="contactOk" hidden tabindex="-1">
+            <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+            <h3 class="mt-2">Solicitud lista</h3>
+            <p class="mx-auto mb-0" id="contactOkText">Gracias. Te contactaremos para coordinar la demostración.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

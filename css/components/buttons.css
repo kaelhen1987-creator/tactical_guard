@@ -1,0 +1,22 @@
+.btn-tg {
+  --btn-bg: var(--tg-indigo); --btn-fg: #fff; --btn-hover: var(--tg-indigo-dark);
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  padding: .85rem 1.5rem; border: 2px solid transparent; border-radius: 12px;
+  font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none;
+  background: var(--btn-bg); color: var(--btn-fg);
+  transition: background-color .15s, transform .15s, border-color .15s, color .15s;
+}
+.btn-tg:hover { background: var(--btn-hover); color: var(--btn-fg); transform: translateY(-1px); }
+.btn-tg:active { transform: translateY(0); }
+
+.btn-tg--amber { --btn-bg: var(--tg-amber); --btn-fg: #2A3039; --btn-hover: #FFC929; }
+.btn-tg--ghost {
+  --btn-bg: transparent; --btn-fg: #fff; --btn-hover: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
+}
+.btn-tg--ghost:hover { border-color: #fff; }
+.btn-tg--outline {
+  --btn-bg: transparent; --btn-fg: var(--tg-indigo); --btn-hover: rgba(58,53,208,.07);
+  border-color: var(--tg-indigo);
+}
+.btn-tg--sm { padding: .6rem 1.1rem; font-size: .95rem; border-radius: 10px; }

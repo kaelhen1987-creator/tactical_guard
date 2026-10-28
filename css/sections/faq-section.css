@@ -1,0 +1,2 @@
+.faq-aside { position: relative; }
+@media (min-width: 992px) { .faq-aside { position: sticky; top: calc(var(--tg-nav-h) + 24px); } }

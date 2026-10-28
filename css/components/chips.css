@@ -1,0 +1,10 @@
+.tg-chip {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .28rem .7rem; border-radius: 999px; font-size: .8rem; font-weight: 600;
+  background: #EDEFF2; color: var(--tg-text); border: 1px solid var(--tg-line);
+  white-space: nowrap;
+}
+.tg-chip--guard { background: var(--tg-amber-soft); border-color: #F1DC93; color: #6B5200; }
+.tg-chip--sup   { background: #E9E8FB; border-color: #CFCDF4; color: #2E2AA0; }
+.tg-chip--admin { background: #E7ECF0; border-color: var(--tg-line); color: #3F4856; }
+.tg-chip--ok    { background: var(--tg-ok-soft); border-color: #B9E0C8; color: var(--tg-ok); }

@@ -1,0 +1,5 @@
+.tg-footer { background: var(--tg-deep); color: #C3CBD4; padding-block: 3rem 2rem; font-size: .95rem; }
+.tg-footer a { color: #E8ECF0; text-decoration: none; }
+.tg-footer a:hover { color: var(--tg-amber); text-decoration: underline; }
+.tg-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.tg-footer .legal { border-top: 1px solid rgba(255,255,255,.14); margin-top: 2rem; padding-top: 1.25rem; font-size: .85rem; }

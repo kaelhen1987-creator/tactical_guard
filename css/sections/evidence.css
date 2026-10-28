@@ -1,0 +1,16 @@
+.evidence-figure { position: relative; margin: 0; }
+.evidence-figure img {
+  display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--tg-line);
+  box-shadow: var(--tg-shadow); background: #fff;
+}
+.mk {
+  position: absolute; width: 30px; height: 30px; border-radius: 50%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; background: var(--tg-indigo); color: #fff;
+  font-weight: 800; font-size: .85rem; box-shadow: 0 0 0 4px rgba(58,53,208,.25);
+}
+.evidence-list { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.evidence-list li { display: grid; grid-template-columns: 30px 1fr; gap: .9rem; }
+.evidence-list .mk { position: static; transform: none; flex: none; }
+.evidence-list h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
+.evidence-list p { margin: 0; font-size: .97rem; }
+@media (max-width: 991.98px) { .evidence-list { grid-template-columns: 1fr; gap: 1.5rem; } }

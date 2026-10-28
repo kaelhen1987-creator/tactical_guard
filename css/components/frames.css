@@ -1,0 +1,13 @@
+/* Marcos para mostrar capturas reales */
+.tg-browser {
+  background: #fff; border: 1px solid var(--tg-line); border-radius: 16px; overflow: hidden;
+  box-shadow: var(--tg-shadow);
+}
+.tg-browser__bar { display: flex; gap: 6px; padding: .6rem .85rem; background: #EEF0F3; border-bottom: 1px solid var(--tg-line); }
+.tg-browser__bar i { width: 10px; height: 10px; border-radius: 50%; background: #C5CBD3; display: block; }
+.tg-browser img { display: block; width: 100%; height: auto; }
+
+.tg-device {
+  padding: 8px; background: #2B323C; border-radius: 34px; box-shadow: var(--tg-shadow);
+}
+.tg-device img { display: block; width: 100%; height: auto; border-radius: 27px; }

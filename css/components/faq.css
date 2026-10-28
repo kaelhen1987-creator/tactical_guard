@@ -1,0 +1,9 @@
+.tg-accordion .accordion-item { border: 0; border-bottom: 1px solid var(--tg-line); background: transparent; border-radius: 0; }
+.tg-accordion .accordion-item:first-child { border-top: 1px solid var(--tg-line); }
+.tg-accordion .accordion-button {
+  padding: 1.35rem 0; background: transparent; box-shadow: none; color: var(--tg-ink);
+  font-weight: 700; font-size: 1.1rem; gap: 1rem;
+}
+.tg-accordion .accordion-button:not(.collapsed) { color: var(--tg-indigo); background: transparent; }
+.tg-accordion .accordion-button:focus-visible { outline: 3px solid var(--tg-amber); outline-offset: 2px; }
+.tg-accordion .accordion-body { padding: 0 0 1.5rem; color: var(--tg-text); max-width: 62ch; }

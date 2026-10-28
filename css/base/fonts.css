@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Archivo";
+  src: url("../../assets/fonts/archivo-latin-wdth.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/inter-latin-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}

@@ -1,0 +1,9 @@
+.tg-form .form-control, .tg-form .form-select {
+  border: 1.5px solid #8A94A0; border-radius: 12px; min-height: 3.5rem; color: var(--tg-ink); background-color: #fff;
+}
+.tg-form textarea.form-control { min-height: 7.5rem; }
+.tg-form .form-floating > label { color: var(--tg-muted); }
+.tg-form .form-control:focus, .tg-form .form-select:focus {
+  border-color: var(--tg-indigo); box-shadow: 0 0 0 3px rgba(58,53,208,.18);
+}
+.tg-form .invalid-feedback { font-weight: 500; }

@@ -1,0 +1,32 @@
+<section class="section section--deep" id="sin-conexion" aria-labelledby="offline-title">
+  <div class="container">
+    <div class="row gy-5 gx-lg-5 align-items-center">
+      <div class="col-lg-5">
+        <h2 id="offline-title">Una garita sin antena sigue registrando.</h2>
+        <p class="lead mt-3">Tactical Guard guarda cada acceso, ronda y novedad en el dispositivo y los envía apenas hay conexión. El guardia no espera, y el supervisor no pierde nada.</p>
+        <p class="mt-3 mb-0" style="color:#C3CBD4">Pruébalo: corta la señal, registra algunos eventos y vuelve a conectar.</p>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="sync-card" id="syncDemo">
+          <div class="sync-head">
+            <span class="sync-status" id="syncStatus" data-state="online" role="status" aria-live="polite"><i></i><span>En línea</span></span>
+            <label class="sync-switch" for="offlineSwitch">
+              <span>Cortar la señal</span>
+              <span class="form-check form-switch m-0 p-0">
+                <input class="form-check-input" type="checkbox" role="switch" id="offlineSwitch">
+              </span>
+            </label>
+          </div>
+          <div class="sync-actions">
+            <button class="btn-tg btn-tg--outline btn-tg--sm" type="button" data-event="ronda"><i class="bi bi-geo-alt" aria-hidden="true"></i> Registrar ronda</button>
+            <button class="btn-tg btn-tg--outline btn-tg--sm" type="button" data-event="acceso"><i class="bi bi-person-vcard" aria-hidden="true"></i> Validar acceso</button>
+            <button class="btn-tg btn-tg--outline btn-tg--sm" type="button" data-event="novedad"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Reportar novedad</button>
+          </div>
+          <ul class="sync-log" id="syncLog" aria-label="Registros del dispositivo"></ul>
+          <p class="sync-queue" id="syncQueue"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

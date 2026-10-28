@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tactical Guard | Control de guardias con evidencia auditable</title>
+  <meta name="description" content="Tactical Guard registra control de acceso, rondas con GPS e incidentes de tus guardias, incluso sin señal. Panel para supervisar y exportar informes en PDF.">
+  <meta name="theme-color" content="#384250">
+  <meta property="og:title" content="Tactical Guard | Control de guardias con evidencia auditable">
+  <meta property="og:description" content="Control de acceso, rondas con geocerca e incidentes. Funciona sin señal.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/tg-shield.svg">
+
+  <link rel="preload" href="assets/fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cada bloque vive en /partials y js/include.js lo inserta en orden -->
+  <div data-include="partials/navbar.html"></div>
+  <main id="contenido" tabindex="-1">
+    <div data-include="partials/hero.html"></div>
+    <div data-include="partials/features.html"></div>
+    <div data-include="partials/showcase.html"></div>
+    <div data-include="partials/how.html"></div>
+    <div data-include="partials/evidence.html"></div>
+    <div data-include="partials/offline.html"></div>
+    <div data-include="partials/faq.html"></div>
+    <div data-include="partials/contact.html"></div>
+  </main>
+  <div data-include="partials/footer.html"></div>
+
+  <noscript><p style="padding:2rem;text-align:center">Esta página necesita JavaScript activado para cargar su contenido.</p></noscript>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/modules/nav.js"></script>
+  <script src="js/modules/features.js"></script>
+  <script src="js/modules/rut-demo.js"></script>
+  <script src="js/modules/offline-demo.js"></script>
+  <script src="js/modules/contact-form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

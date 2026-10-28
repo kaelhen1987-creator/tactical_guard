@@ -1,0 +1,23 @@
+/* Tactical Guard · landing
+   Punto de entrada: importa tokens, base, componentes y secciones (en ese orden). */
+@import url("base/tokens.css");
+@import url("base/fonts.css");
+@import url("base/base.css");
+
+@import url("components/buttons.css");
+@import url("components/navbar.css");
+@import url("components/phone.css");
+@import url("components/frames.css");
+@import url("components/chips.css");
+@import url("components/faq.css");
+@import url("components/form.css");
+
+@import url("sections/hero.css");
+@import url("sections/features.css");
+@import url("sections/showcase.css");
+@import url("sections/how.css");
+@import url("sections/evidence.css");
+@import url("sections/offline.css");
+@import url("sections/faq-section.css");
+@import url("sections/contact.css");
+@import url("sections/footer.css");

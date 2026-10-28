@@ -1,0 +1,40 @@
+/* Paleta tomada de la app (panel y app móvil) */
+:root {
+  --tg-deep:   #384250;   /* fondo de bloques oscuros */
+  --tg-slate:  #5E6B78;   /* barra lateral / marca */
+  --tg-shield: #707A8A;   /* escudo del logo */
+  --tg-ink:    #333B47;   /* títulos */
+  --tg-text:   #3F4856;   /* texto */
+  --tg-muted:  #5E6B78;
+  --tg-line:   #D5D9DF;
+  --tg-paper:  #F8F9FA;
+  --tg-white:  #FFFFFF;
+
+  --tg-amber:  #F5B700;   /* acento: borde del escudo, pestaña activa */
+  --tg-amber-soft: #FDF1C7;
+  --tg-indigo: #3A35D0;   /* acción principal */
+  --tg-indigo-dark: #2E2AB0;
+  --tg-sos:    #C62828;
+  --tg-ok:     #1E7B4B;
+  --tg-ok-soft:#E3F4EA;
+
+  --tg-font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --tg-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --tg-radius-sm: 8px;
+  --tg-radius: 14px;
+  --tg-radius-lg: 28px;
+  --tg-shadow: 0 18px 40px -18px rgba(56, 66, 80, .35);
+
+  --tg-section-y: clamp(4.5rem, 9vw, 7.5rem);
+  --tg-nav-h: 72px;
+
+  /* Bootstrap */
+  --bs-body-font-family: var(--tg-font-body);
+  --bs-body-color: var(--tg-text);
+  --bs-body-bg: var(--tg-white);
+  --bs-primary: var(--tg-indigo);
+  --bs-primary-rgb: 58, 53, 208;
+  --bs-link-color: var(--tg-indigo);
+  --bs-border-color: var(--tg-line);
+}

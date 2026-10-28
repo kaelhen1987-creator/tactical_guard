@@ -1,0 +1,25 @@
+.showcase-tabs { display: flex; flex-direction: column; gap: .5rem; }
+.showcase-tab {
+  text-align: left; background: transparent; border: 0; border-left: 4px solid var(--tg-line);
+  padding: 1rem 1.25rem; color: var(--tg-text); border-radius: 0 12px 12px 0;
+  transition: background-color .15s, border-color .15s;
+}
+.showcase-tab strong { display: block; font-size: 1.05rem; color: var(--tg-ink); margin-bottom: .15rem; }
+.showcase-tab span { display: block; font-size: .94rem; line-height: 1.45; color: var(--tg-muted); }
+.showcase-tab:hover { background: rgba(94,107,120,.07); }
+.showcase-tab.active { border-left-color: var(--tg-amber); background: var(--tg-paper); }
+
+.showcase-stage {
+  background: #E9ECF0; border-radius: var(--tg-radius-lg); padding: clamp(1rem, 3vw, 2rem);
+  display: grid; place-items: center; min-height: 420px;
+}
+.showcase-stage .tg-browser { width: 100%; }
+.showcase-phones { display: flex; gap: 1.5rem; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+.showcase-phones .tg-device { width: min(240px, 44%); min-width: 190px; }
+.showcase-phones .tg-device:nth-child(2) { margin-top: 2.5rem; }
+
+@media (max-width: 991.98px) {
+  .showcase-tabs { flex-direction: row; overflow-x: auto; gap: .25rem; padding-bottom: .5rem; margin-bottom: 1rem; }
+  .showcase-tab { flex: 0 0 auto; min-width: 210px; border-left: 0; border-bottom: 4px solid var(--tg-line); border-radius: 12px 12px 0 0; }
+  .showcase-tab.active { border-bottom-color: var(--tg-amber); }
+}
