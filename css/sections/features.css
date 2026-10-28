@@ -54,33 +54,145 @@
   padding: .45rem .9rem; border-radius: 999px; font-weight: 700; font-size: .88rem; background: #fff; }
 .fx-dist--out { color: var(--tg-sos); } .fx-dist--in { color: var(--tg-ok); opacity: 0; }
 
-/* novedad */
-.fx-photo { height: 120px; border-radius: 14px; background: #E3E7EB; display: grid; place-content: center; justify-items: center; gap: .2rem; color: var(--tg-muted); margin-bottom: .9rem; position: relative; }
-.fx-photo i { font-size: 1.8rem; } .fx-photo small { font-weight: 600; }
-.fx-btn { padding: .8rem; border-radius: 12px; background: var(--tg-indigo); color: #fff; font-weight: 800; text-align: center; font-size: .9rem; }
-.fx-btn--inline { display: inline-flex; gap: .5rem; padding: .8rem 1.4rem; }
-.fx-toast { margin-top: .75rem; display: flex; gap: .5rem; align-items: center; padding: .65rem .8rem; border-radius: 12px; background: var(--tg-ok-soft); color: #17603A; font-weight: 600; font-size: .86rem; }
+/* ── Vista de App Móvil (Teléfono realista como en Imagen 2) ── */
+.fx-phone-card {
+  width: min(310px, 100%);
+  margin: 0 auto;
+  background: #2B323C;
+  border-radius: 38px;
+  padding: 8px;
+  box-shadow: 0 32px 60px -20px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.08) inset;
+  font-family: var(--tg-font-body);
+}
+.fx-phone-screen {
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+.fx-phone-head {
+  background: #3B4654;
+  color: #fff;
+  padding: .95rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.fx-phone-head i { font-size: 1.1rem; }
+.fx-phone-head b { font-size: .95rem; font-weight: 700; }
+.fx-phone-body {
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  flex: 1;
+}
+.fx-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.fx-form-group label {
+  font-size: .72rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin: 0;
+}
+.fx-select-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .65rem .8rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #1F2937;
+  background: #fff;
+}
+.fx-select-box span {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+.fx-select-box span i {
+  color: #6B7280;
+  font-size: .85rem;
+}
+.fx-select-box > i {
+  font-size: .75rem;
+  color: #6B7280;
+}
+.fx-textarea-box {
+  position: relative;
+  min-height: 110px;
+  padding: .75rem .8rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: .86rem;
+  color: #6B7280;
+  background: #fff;
+}
+.fx-textarea-box i {
+  position: absolute;
+  right: .8rem;
+  bottom: .8rem;
+  font-size: 1.15rem;
+  color: #6B7280;
+}
+.fx-btn-evidence {
+  width: 100%;
+  padding: .75rem .5rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--tg-amber);
+  color: #1F2937;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  cursor: pointer;
+  transition: filter .15s;
+}
+.fx-btn-evidence:hover { filter: brightness(.95); }
+.fx-btn-save {
+  width: 100%;
+  padding: .75rem .5rem;
+  border: 0;
+  border-radius: 8px;
+  background: #3B4654;
+  color: #fff;
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+.fx-btn-save:hover { background: #2F3844; }
 
-/* sos */
-.fx-sos { position: relative; width: 150px; height: 150px; display: grid; place-items: center; }
-.fx-sos b { position: relative; z-index: 1; width: 110px; height: 110px; border-radius: 50%; background: var(--tg-sos); color: #fff; font-size: 1.5rem; display: grid; place-items: center; box-shadow: 0 16px 30px -8px rgba(198,40,40,.7); }
-.fx-sos i { position: absolute; inset: 20px; border-radius: 50%; border: 2px solid rgba(255,120,120,.8); opacity: 0; }
-
-/* bitácora */
-.fx-toolbar { display: flex; gap: .75rem; justify-content: space-between; flex-wrap: wrap; font-size: .85rem; font-weight: 600; color: var(--tg-ink); padding-bottom: .9rem; }
-.fx-search { flex: 1 1 180px; padding: .4rem .8rem; border: 1px solid var(--tg-line); border-radius: 10px; color: var(--tg-muted); font-weight: 500; }
-.fx-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
-.fx-rows li { display: grid; grid-template-columns: 64px 1fr auto; gap: .9rem; align-items: center; padding: .6rem; border: 1px solid var(--tg-line); border-radius: 12px; }
-.fx-rows b { color: var(--tg-ink); display: block; } .fx-rows small { color: var(--tg-muted); font-size: .76rem; display: block; line-height: 1.3; }
-.fx-thumb { height: 48px; border-radius: 8px; background: #E3E7EB; display: grid; place-items: center; font-size: .6rem; font-weight: 800; color: var(--tg-text); }
-
-/* muro */
-.fx-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
-.fx-tile { background: #fff; border-radius: 14px; padding: .55rem .55rem .8rem; box-shadow: 0 24px 40px -26px rgba(0,0,0,.6); }
-.fx-tile__img { height: 96px; border-radius: 9px; background: #E3E7EB; margin-bottom: .6rem; }
-.fx-tile b { display: block; color: var(--tg-ink); font-size: .85rem; margin-top: .35rem; } .fx-tile small { color: var(--tg-muted); font-size: .72rem; }
-.fx-tag { display: inline-block; font-size: .68rem; font-weight: 800; padding: .15rem .55rem; border-radius: 999px; }
-.fx-tag--red { background: #FCE0E0; color: #A11D1D; } .fx-tag--amber { background: var(--tg-amber); color: #2A3039; }
+/* ── Vista de Panel Web Real (Imagen 1) ── */
+.fx-browser-view {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -14px rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.fx-browser-view img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* pdf */
 .fx-sheet { width: 230px; background: #fff; border-radius: 6px; padding: 1.1rem; display: grid; gap: .55rem; box-shadow: 0 30px 50px -24px rgba(0,0,0,.6); transform: rotate(-2deg); }

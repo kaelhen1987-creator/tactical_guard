@@ -10,9 +10,8 @@ TG.features = function () {
   const panels = root.querySelectorAll(".fx-panel");
   const badge = document.getElementById("fxBadge");
   const BADGE = {
-    guardia:    '<i class="bi bi-phone" aria-hidden="true"></i> App del guardia',
-    supervisor: '<i class="bi bi-display" aria-hidden="true"></i> Panel del supervisor',
-    admin:      '<i class="bi bi-gear" aria-hidden="true"></i> Panel de administración'
+    app: '<i class="bi bi-phone" aria-hidden="true"></i> App móvil del guardia',
+    web: '<i class="bi bi-display" aria-hidden="true"></i> Panel web de operaciones'
   };
 
   function select(item) {
@@ -23,13 +22,18 @@ TG.features = function () {
       p.classList.remove("is-on");
       if (on) { void p.offsetWidth; p.classList.add("is-on"); }
     });
-    badge.innerHTML = BADGE[item.dataset.role];
+    if (badge && BADGE[item.dataset.role]) {
+      badge.innerHTML = BADGE[item.dataset.role];
+    }
   }
 
-  function setRole(role) {
+  function setRole(role, targetPanel) {
     roleBtns.forEach((b) => { const on = b.dataset.role === role; b.classList.toggle("is-on", on); b.setAttribute("aria-pressed", on); });
     items.forEach((i) => { i.hidden = i.dataset.role !== role; });
-    select(items.find((i) => i.dataset.role === role));
+    const target = targetPanel
+      ? items.find((i) => i.dataset.role === role && i.dataset.panel === targetPanel)
+      : (role === "web" ? items.find((i) => i.dataset.role === "web" && i.dataset.panel === "muro") : items.find((i) => i.dataset.role === role));
+    if (target) select(target);
   }
 
   roleBtns.forEach((b) => b.addEventListener("click", () => setRole(b.dataset.role)));
@@ -47,5 +51,5 @@ TG.features = function () {
     t.focus(); select(t);
   });
 
-  setRole("guardia");
+  setRole("app", "novedad");
 };

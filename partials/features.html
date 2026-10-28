@@ -2,61 +2,61 @@
   <div class="container">
     <div class="section-head">
       <h2 id="funciones-title">Mira cada función en acción.</h2>
-      <p class="lead">Elige quién la usa y qué quieres ver. Son ejemplos ilustrativos de lo que hace la app en terreno y en el panel.</p>
+      <p class="lead">Elige dónde se usa, en la garita (app móvil) o en la oficina (panel web), y mira cada función en las pantallas reales de Tactical Guard.</p>
     </div>
 
     <div class="fx" id="fx">
       <div class="fx-nav">
-        <div class="fx-roles" role="group" aria-label="Filtrar por rol">
-          <button type="button" class="fx-role is-on" data-role="guardia" aria-pressed="true"><i class="bi bi-shield-check" aria-hidden="true"></i> Guardia</button>
-          <button type="button" class="fx-role" data-role="supervisor" aria-pressed="false"><i class="bi bi-display" aria-hidden="true"></i> Supervisor</button>
-          <button type="button" class="fx-role" data-role="admin" aria-pressed="false"><i class="bi bi-gear" aria-hidden="true"></i> Administrador</button>
+        <div class="fx-roles" role="group" aria-label="Filtrar por plataforma">
+          <button type="button" class="fx-role is-on" data-role="app" aria-pressed="true"><i class="bi bi-phone" aria-hidden="true"></i> App móvil</button>
+          <button type="button" class="fx-role" data-role="web" aria-pressed="false"><i class="bi bi-display" aria-hidden="true"></i> Panel web</button>
         </div>
 
         <div class="fx-list" role="tablist" aria-orientation="vertical" aria-label="Funciones">
-          <button class="fx-item" role="tab" id="fxt-acceso" aria-controls="fx-acceso" data-role="guardia" data-panel="acceso" type="button">
+          <!-- App móvil -->
+          <button class="fx-item" role="tab" id="fxt-acceso" aria-controls="fx-acceso" data-role="app" data-panel="acceso" type="button">
             <i class="bi bi-person-vcard" aria-hidden="true"></i>
             <span><strong>Control de acceso</strong><small>RUT en cualquier formato o escáner de cédula.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-ronda" aria-controls="fx-ronda" data-role="guardia" data-panel="ronda" type="button">
+          <button class="fx-item" role="tab" id="fxt-ronda" aria-controls="fx-ronda" data-role="app" data-panel="ronda" type="button">
             <i class="bi bi-geo-alt" aria-hidden="true"></i>
             <span><strong>Rondas con geocerca</strong><small>La marca solo vale dentro del radio del punto.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-novedad" aria-controls="fx-novedad" data-role="guardia" data-panel="novedad" type="button">
+          <button class="fx-item" role="tab" id="fxt-novedad" aria-controls="fx-novedad" data-role="app" data-panel="novedad" type="button">
             <i class="bi bi-exclamation-triangle" aria-hidden="true"></i>
             <span><strong>Novedades con foto</strong><small>Reporta el hecho con evidencia, al momento.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-sos" aria-controls="fx-sos" data-role="guardia" data-panel="sos" type="button">
+          <button class="fx-item" role="tab" id="fxt-sos" aria-controls="fx-sos" data-role="app" data-panel="sos" type="button">
             <i class="bi bi-broadcast" aria-hidden="true"></i>
-            <span><strong>Botón SOS</strong><small>Siempre visible, sin buscar en menús.</small></span>
+            <span><strong>Botón SOS</strong><small>Siempre visible. La alerta llega a operaciones.</small></span>
           </button>
 
-          <button class="fx-item" role="tab" id="fxt-bitacora" aria-controls="fx-bitacora" data-role="supervisor" data-panel="bitacora" type="button" hidden>
+          <!-- Panel web -->
+          <button class="fx-item" role="tab" id="fxt-bitacora" aria-controls="fx-bitacora" data-role="web" data-panel="bitacora" type="button" hidden>
             <i class="bi bi-clipboard-check" aria-hidden="true"></i>
             <span><strong>Bitácora de rondas</strong><small>Foto, hora, coordenadas y validez de cada marca.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-muro" aria-controls="fx-muro" data-role="supervisor" data-panel="muro" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-muro" aria-controls="fx-muro" data-role="web" data-panel="muro" type="button" hidden>
             <i class="bi bi-grid-3x2-gap" aria-hidden="true"></i>
             <span><strong>Muro de incidentes</strong><small>Los hechos de todas tus instalaciones en un lugar.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-pdf" aria-controls="fx-pdf" data-role="supervisor" data-panel="pdf" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-pdf" aria-controls="fx-pdf" data-role="web" data-panel="pdf" type="button" hidden>
             <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-            <span><strong>Informes en PDF</strong><small>Listos para entregar a tu cliente.</small></span>
+            <span><strong>Informes ejecutivos en PDF</strong><small>Listos para entregar a tu cliente.</small></span>
           </button>
-
-          <button class="fx-item" role="tab" id="fxt-padron" aria-controls="fx-padron" data-role="admin" data-panel="padron" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-padron" aria-controls="fx-padron" data-role="web" data-panel="padron" type="button" hidden>
             <i class="bi bi-people" aria-hidden="true"></i>
-            <span><strong>Padrón por CSV</strong><small>Carga tu nómina de trabajadores de una vez.</small></span>
+            <span><strong>Padrón por Excel o CSV</strong><small>Carga tu nómina de trabajadores de una vez.</small></span>
           </button>
-          <button class="fx-item" role="tab" id="fxt-instal" aria-controls="fx-instal" data-role="admin" data-panel="instal" type="button" hidden>
+          <button class="fx-item" role="tab" id="fxt-instal" aria-controls="fx-instal" data-role="web" data-panel="instal" type="button" hidden>
             <i class="bi bi-buildings" aria-hidden="true"></i>
-            <span><strong>Instalaciones y guardias</strong><small>Administra faenas, puntos de control y personal.</small></span>
+            <span><strong>Instalaciones y accesos</strong><small>Da de alta o bloquea faenas y puntos de acceso.</small></span>
           </button>
         </div>
       </div>
 
       <div class="fx-stage">
-        <span class="fx-badge" id="fxBadge"><i class="bi bi-phone" aria-hidden="true"></i> App del guardia</span>
+        <span class="fx-badge" id="fxBadge"><i class="bi bi-phone" aria-hidden="true"></i> App móvil del guardia</span>
 
         <!-- 1 · Acceso -->
         <div class="fx-panel" role="tabpanel" id="fx-acceso" aria-labelledby="fxt-acceso" tabindex="0" hidden>
@@ -79,14 +79,34 @@
           <p class="fx-note">El GPS del guardia se compara con el punto de vigilancia en cada marca.</p>
         </div>
 
-        <!-- 3 · Novedad -->
+        <!-- 3 · Novedad (Imagen 2 de referencia) -->
         <div class="fx-panel" role="tabpanel" id="fx-novedad" aria-labelledby="fxt-novedad" tabindex="0" hidden>
-          <div class="fx-card fx-card--narrow">
-            <p class="fx-title">Nueva novedad</p>
-            <div class="fx-pills fx-pills--pick"><span class="on">Intrusión</span><span>Emergencia médica</span><span>Otro</span></div>
-            <div class="fx-photo"><i class="bi bi-camera-fill" aria-hidden="true"></i><small>Evidencia fotográfica</small></div>
-            <div class="fx-btn">Enviar novedad</div>
-            <div class="fx-toast fx-late"><i class="bi bi-check2-circle" aria-hidden="true"></i> Enviada con foto, hora y GPS</div>
+          <div class="fx-phone-card">
+            <div class="fx-phone-screen">
+              <div class="fx-phone-head">
+                <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                <b>Reportar Novedad</b>
+              </div>
+              <div class="fx-phone-body">
+                <div class="fx-form-group">
+                  <label>Tipo de Novedad *</label>
+                  <div class="fx-select-box">
+                    <span><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Sospecha</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="fx-textarea-box">
+                  <span>Descripción del incidente</span>
+                  <i class="bi bi-mic" aria-hidden="true"></i>
+                </div>
+                <button type="button" class="fx-btn-evidence">
+                  <i class="bi bi-camera-fill" aria-hidden="true"></i> TOMAR EVIDENCIA (Opcional)
+                </button>
+                <button type="button" class="fx-btn-save">
+                  GUARDAR NOVEDAD
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -96,24 +116,17 @@
           <p class="fx-note">Visible en todas las pantallas del guardia.</p>
         </div>
 
-        <!-- 5 · Bitácora -->
+        <!-- 5 · Bitácora (Panel Web) -->
         <div class="fx-panel" role="tabpanel" id="fx-bitacora" aria-labelledby="fxt-bitacora" tabindex="0" hidden>
-          <div class="fx-card">
-            <div class="fx-toolbar"><span>Todas las faenas <i class="bi bi-caret-down-fill"></i></span><span class="fx-search"><i class="bi bi-search"></i> Buscar punto, guardia o RUT</span></div>
-            <ul class="fx-rows">
-              <li><span class="fx-thumb">FOTO</span><div><b>Punto de Vigilancia</b><small>26/10/2026 15:36:39 · Lat -40.07060, Lng -72.86860</small></div><span class="tg-chip tg-chip--ok"><i class="bi bi-check2"></i> Geocerca válida</span></li>
-              <li><span class="fx-thumb">FOTO</span><div><b>Punto de Vigilancia</b><small>26/10/2026 14:23:52 · Lat -40.07060, Lng -72.86860</small></div><span class="tg-chip tg-chip--ok"><i class="bi bi-check2"></i> Geocerca válida</span></li>
-              <li><span class="fx-thumb">FOTO</span><div><b>Punto de Vigilancia</b><small>26/10/2026 12:10:05 · Lat -40.07061, Lng -72.86858</small></div><span class="tg-chip tg-chip--ok"><i class="bi bi-check2"></i> Geocerca válida</span></li>
-            </ul>
+          <div class="fx-browser-view">
+            <img src="assets/img/panel-rondas.webp" width="1280" height="820" loading="lazy" alt="Panel web de operaciones - Bitácora de rondas">
           </div>
         </div>
 
-        <!-- 6 · Muro -->
+        <!-- 6 · Muro (Imagen 1 de referencia) -->
         <div class="fx-panel" role="tabpanel" id="fx-muro" aria-labelledby="fxt-muro" tabindex="0" hidden>
-          <div class="fx-wall">
-            <div class="fx-tile"><div class="fx-tile__img"></div><span class="fx-tag fx-tag--red">Emergencia médica</span><b>Garita Norte</b><small>12345678-5 · 15:36</small></div>
-            <div class="fx-tile"><div class="fx-tile__img"></div><span class="fx-tag fx-tag--amber">Intrusión</span><b>Garita Norte</b><small>12345678-9 · 15:36</small></div>
-            <div class="fx-tile"><div class="fx-tile__img"></div><span class="fx-tag fx-tag--red">Emergencia médica</span><b>Garita Norte</b><small>12345678-5 · 14:23</small></div>
+          <div class="fx-browser-view">
+            <img src="assets/img/panel-incidentes.webp" width="1280" height="820" loading="lazy" alt="Panel web de operaciones - Muro de incidentes">
           </div>
         </div>
 
@@ -146,7 +159,7 @@
         <!-- 9 · Instalaciones -->
         <div class="fx-panel" role="tabpanel" id="fx-instal" aria-labelledby="fxt-instal" tabindex="0" hidden>
           <div class="fx-card">
-            <p class="fx-title">Instalaciones</p>
+            <p class="fx-title">Instalaciones y accesos</p>
             <ul class="fx-sites">
               <li><i class="bi bi-buildings"></i><div><b>Faena Norte</b><small>3 puntos de control · 6 guardias</small></div><span class="tg-chip">Ejemplo</span></li>
               <li><i class="bi bi-buildings"></i><div><b>Planta Central</b><small>2 puntos de control · 4 guardias</small></div><span class="tg-chip">Ejemplo</span></li>
